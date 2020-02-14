@@ -28,6 +28,15 @@ void DisplayBoard(char** arr){
     }
 }
 
+
+void GetPlayerChoice(char** arr; int *x, int *y){
+    do{
+      std::cout << "Input x position";
+      std::getline(std::cin,x);
+      std::cout << "Input y position";
+      std::getline(std::cin,y);
+    }while(arr[x][y] == " ")
+
 void PlaceMarker(int x, int y, char marker, char** board)
 {
     board[x-1][y-1] = marker;
@@ -37,7 +46,10 @@ void PlaceMarker(int x, int y, char marker, char** board)
 int main(){
     char** arr = CreateBoard();
     DisplayBoard(arr);
-    PlaceMarker(3,1,'O',arr);
+    int* x,y;
+    char marker = 'O';
+    GetPLayerChoice(arr,x,y);
+    PlaceMarker(x,y,marker,arr);
     DisplayBoard(arr);
 }
 
