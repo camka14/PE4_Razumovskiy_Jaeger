@@ -1,3 +1,4 @@
+#include <iostream>
 
 char** CreateBoard()
     {
@@ -27,7 +28,14 @@ void DisplayBoard(char** arr){
     }
 }
 
+void PlaceMarker(int x, int y, char marker, char** board)
+{
+    board[x][y] = marker;
+    return;
+}
+
 int main(){
     char** arr = CreateBoard();
     DisplayBoard(arr);
 }
+
