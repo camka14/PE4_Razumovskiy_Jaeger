@@ -1,3 +1,4 @@
+#include <iostream>
 
 char** CreateBoard()
     {
@@ -25,6 +26,12 @@ void DisplayBoard(char** arr){
         }
         std::cout << std::endl;
     }
+}
+
+void PlaceMarker(int x, int y, char marker, char** board)
+{
+    board[x][y] = marker;
+    return;
 }
 
 int main(){
