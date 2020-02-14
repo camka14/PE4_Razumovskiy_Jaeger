@@ -11,7 +11,7 @@ char** CreateBoard()
 
             for (int w = 0; w < 3; w++)
             {
-                  array2D[h][w] = ' ';
+                  array2D[h][w] = 'X';
             }
       }
 
@@ -30,12 +30,14 @@ void DisplayBoard(char** arr){
 
 void PlaceMarker(int x, int y, char marker, char** board)
 {
-    board[x][y] = marker;
+    board[x-1][y-1] = marker;
     return;
 }
 
 int main(){
     char** arr = CreateBoard();
+    DisplayBoard(arr);
+    PlaceMarker(3,1,'O',arr);
     DisplayBoard(arr);
 }
 
