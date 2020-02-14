@@ -1,3 +1,4 @@
+#include <iostream>
 
 char** CreateBoard()
     {
@@ -27,7 +28,18 @@ void DisplayBoard(char** arr){
     }
 }
 
+void GetPlayerChoice(char** arr; int *x, int *y){
+    do{
+      std::cout << "Input x position";
+      std::getline(std::cin,x);
+      std::cout << "Input y position";
+      std::getline(std::cin,y);
+    }while(arr[x][y] == " ")
+}
+
 int main(){
     char** arr = CreateBoard();
     DisplayBoard(arr);
+    int* x,y;
+    GetPLayerChoice(arr,x,y);
 }
