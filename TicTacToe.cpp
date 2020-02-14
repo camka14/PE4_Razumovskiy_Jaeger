@@ -29,6 +29,7 @@ void DisplayBoard(char** arr){
 }
 
 
+
 void GetPlayerChoice(int *x, int *y){
     std::cout << "Input x position: ";
     std::cin >> *x;
@@ -64,4 +65,3 @@ int main(){
         DisplayBoard(arr);
     }
 }
-
